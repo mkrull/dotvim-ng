@@ -8,10 +8,8 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'tpope/vim-unimpaired'
 " easyly edit surrounding brackets and tags
 Bundle 'tpope/vim-surround'
-" complete everything
 " run in the install directory:
 " ./install.sh --omnisharp-completer --clang-completer
-Bundle 'Valloric/YouCompleteMe'
 " c# development
 Bundle 'nosami/Omnisharp'
 " solarized colors
@@ -26,17 +24,19 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'godlygeek/csapprox'
 " easy alignment
 Bundle 'godlygeek/tabular'
-" list buffers
-Bundle 'vim-scripts/bufexplorer.zip'
 " tagbar
 Bundle 'majutsushi/tagbar'
-" fuzzy finding files - requires ruby support in vim and a c compiler
-"Bundle 'wincent/Command-T'
-
+" list buffers
+Bundle 'vim-scripts/bufexplorer.zip'
+" fuzzy finding files
+Bundle 'kien/ctrlp.vim'
 " Perl support
 Bundle 'vim-perl/vim-perl'
 Bundle 'vim-scripts/perl-support.vim'
 Bundle 'yko/mojo.vim'
+
+" golang support
+Bundle 'Blackrush/vim-gocode'
 
 " snippets
 Bundle "MarcWeber/vim-addon-mw-utils"
@@ -44,5 +44,11 @@ Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 Bundle "honza/vim-snippets"
 
-" debugging
-Bundle 'xieyu/pyclewn'
+" beautifications
+Bundle 'mhinz/vim-signify'
+" show buffers in modeline
+Bundle 'bling/vim-bufferline'
+" fancy status bar
+Bundle 'bling/vim-airline'
+" complete everything
+Bundle 'Valloric/YouCompleteMe'

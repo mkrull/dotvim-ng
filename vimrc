@@ -72,8 +72,6 @@ if has('gui_running')
 
   let g:solarized_visibility = "low"
 
-  colorscheme solarized
-
   call SetupNERDTree()
 else
   set background=dark
@@ -81,9 +79,11 @@ else
   let g:solarized_termcolors = 256
   let g:solarized_visibility = "low"
   let g:solarized_contrast   = "high"
-
-  colorscheme solarized
 endif
+
+colorscheme solarized
+" fix gutter colours
+highlight SignColumn ctermbg=235 guibg='#073642'
 
 " syntastic
 let g:syntastic_stl_format = '[%E{Error: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
@@ -95,6 +95,19 @@ set statusline+=%F%m%r%h%w\ [%l,%v][%p%%]\ [%L]
 let g:syntastic_enable_signs = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': [], 'passive_filetypes': ['html'] }
+
+" show signify only when toggled
+let g:signify_disable_by_default = 1
+let g:signify_sign_add               = '+'
+let g:signify_sign_change            = '!'
+let g:signify_sign_delete            = '-'
+let g:signify_sign_delete_first_line = '|'
+
+" better airline
+set laststatus=2
+let g:airline_powerline_fonts = 1
+let g:airline_left_sep=' '
+let g:airline_right_sep=' '
 
 " mojolicious highlighting
 let mojo_highlight_data = 1
@@ -113,12 +126,10 @@ imap <right> <nop>
 nnoremap <CR> :noh<CR><CR>
 
 " toggle explorers
-" will not work in terminals that open help on f1
-nnoremap <f1> :NERDTreeToggle<CR>
-" will work in terminals
 nnoremap <C-N> :NERDTreeToggle<CR>
 nnoremap <f2> :BufExplorer<cr>
 nnoremap <f3> :TagbarToggle<cr>
+nnoremap <f4> :SignifyToggle<cr>
 
 " faster window navigation
 map <C-H> <C-w>h
@@ -126,3 +137,31 @@ map <C-J> <C-w>j
 map <C-K> <C-w>k
 map <C-L> <C-w>l
 
+" gotags
+let g:tagbar_type_go = {
+    \ 'ctagstype' : 'go',
+    \ 'kinds'     : [
+        \ 'p:package',
+        \ 'i:imports:1',
+        \ 'c:constants',
+        \ 'v:variables',
+        \ 't:types',
+        \ 'n:interfaces',
+        \ 'w:fields',
+        \ 'e:embedded',
+        \ 'm:methods',
+        \ 'r:constructor',
+        \ 'f:functions'
+    \ ],
+    \ 'sro' : '.',
+    \ 'kind2scope' : {
+        \ 't' : 'ctype',
+        \ 'n' : 'ntype'
+    \ },
+    \ 'scope2kind' : {
+        \ 'ctype' : 't',
+        \ 'ntype' : 'n'
+    \ },
+    \ 'ctagsbin'  : 'gotags',
+    \ 'ctagsargs' : '-sort -silent'
+\ }
