@@ -30,6 +30,10 @@ Bundle 'majutsushi/tagbar'
 Bundle 'vim-scripts/bufexplorer.zip'
 " fuzzy finding files
 Bundle 'kien/ctrlp.vim'
+
+" database support
+Bundle 'vim-scripts/dbext.vim'
+
 " Perl support
 Bundle 'vim-perl/vim-perl'
 Bundle 'vim-scripts/perl-support.vim'
@@ -37,6 +41,12 @@ Bundle 'yko/mojo.vim'
 
 " golang support
 Bundle 'Blackrush/vim-gocode'
+
+" Ruby/Rails support
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-abolish'
+Bundle 'tpope/vim-bundler'
+Bundle 'tpope/vim-rails'
 
 " snippets
 Bundle "MarcWeber/vim-addon-mw-utils"
