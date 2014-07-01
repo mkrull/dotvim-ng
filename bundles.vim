@@ -28,8 +28,8 @@ Bundle 'godlygeek/tabular'
 Bundle 'majutsushi/tagbar'
 " list buffers
 Bundle 'vim-scripts/bufexplorer.zip'
-" fuzzy finding files
-Bundle 'kien/ctrlp.vim'
+" fuzzy finding everything
+Bundle 'Shougo/unite.vim'
 
 " database support
 Bundle 'vim-scripts/dbext.vim'

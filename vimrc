@@ -3,13 +3,14 @@ set nobackup
 set noerrorbells
 set noflash
 set nowrap
+syntax on
 
 filetype off
 
 " install plugins
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#rc()
-Bundle 'gmarik/vundle'
+Bundle 'gmarik/Vundle.vim'
 source ~/.vim/bundles.vim
 
 filetype plugin indent on
@@ -165,3 +166,7 @@ let g:tagbar_type_go = {
     \ 'ctagsbin'  : 'gotags',
     \ 'ctagsargs' : '-sort -silent'
 \ }
+
+let g:ycm_server_keep_logfiles = 1
+let g:ycm_server_log_level = 'debug'
+
