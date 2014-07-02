@@ -170,3 +170,23 @@ let g:tagbar_type_go = {
 let g:ycm_server_keep_logfiles = 1
 let g:ycm_server_log_level = 'debug'
 
+" unite config
+" fuzzy matcher by default
+call unite#filters#matcher_default#use(['matcher_regex'])
+" ctrl-p
+nnoremap <C-p> :Unite -start-insert file_rec/async<cr>
+nnoremap <C-p>f :Unite -start-insert file_rec/async<cr>
+" yank history
+let g:unite_source_history_yank_enable = 1
+nnoremap <space>y :Unite history/yank<cr>
+
+" grep
+nnoremap <space>/ :Unite -auto-preview grep:.<cr>
+
+" movement in insert mode
+autocmd FileType unite call s:unite_movement()
+function! s:unite_movement()
+    imap <buffer> <C-n> <Plug>(unite_select_next_line)
+    imap <buffer> <C-p> <Plug>(unite_select_previous_line)
+endfunction
+

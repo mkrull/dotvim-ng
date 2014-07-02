@@ -29,9 +29,15 @@ if [ -x "/usr/bin/yaourt" ]; then
     popd  > /dev/null 2>&1
 
     echo "installing go packages"
-    mkdir -p "${HOME}/gopath/{src,bin}"
+    mkdir -p "${HOME}/gopath/bin"
+    mkdir -p "${HOME}/gopath/src"
     go get -u github.com/nsf/gocode
     go get -u github.com/jstemmer/gotags
+
+    echo "building vimproc"
+    pushd "${HOME}/.vim/bundle/vimproc.vim" > /dev/null 2>&1
+    make > /dev/null 2>&1
+    popd > /dev/null 2>&1
 else
     echo "TODO: implement full install for more systems"
     echo

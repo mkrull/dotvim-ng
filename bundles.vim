@@ -29,6 +29,7 @@ Bundle 'majutsushi/tagbar'
 " list buffers
 Bundle 'vim-scripts/bufexplorer.zip'
 " fuzzy finding everything
+Bundle 'Shougo/vimproc.vim'
 Bundle 'Shougo/unite.vim'
 
 " database support
