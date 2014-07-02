@@ -3,8 +3,8 @@
 # links in $HOME
 if [ -d "${HOME}/dotvim-ng" ]; then
     echo "setting links"
-    ln -s "${HOME}/dotvim-ng ${HOME}/.vim"  > /dev/null 2>&1
-    ln -s "${HOME}/dotvim-ng/vimrc ${HOME}/.vimrc"  > /dev/null 2>&1
+    ln -s "${HOME}/dotvim-ng" "${HOME}/.vim"  > /dev/null 2>&1
+    ln -s "${HOME}/dotvim-ng/vimrc" "${HOME}/.vimrc"  > /dev/null 2>&1
 else
     echo "${HOME}/dotvim-ng missing"
     exit 1
