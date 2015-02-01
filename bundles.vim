@@ -41,7 +41,7 @@ Bundle 'vim-scripts/perl-support.vim'
 Bundle 'yko/mojo.vim'
 
 " golang support
-Bundle 'Blackrush/vim-gocode'
+Bundle 'fatih/vim-go'
 
 " Ruby/Rails support
 Bundle 'vim-ruby/vim-ruby'
