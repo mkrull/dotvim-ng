@@ -1,65 +1,55 @@
-" git integration
-Bundle 'tpope/vim-fugitive'
-" async tasks
-Bundle 'tpope/vim-dispatch'
+" vim shell. mainly for windows where there are no realy good shells
+NeoBundle 'Shougo/vimshell'
+" snippets
+NeoBundle 'Shougo/neosnippet.vim'
+NeoBundle 'Shougo/neosnippet-snippets'
 " autoclose quotes
-Bundle 'Raimondi/delimitMate'
+NeoBundle 'Raimondi/delimitMate'
 " pairs of brackets
-Bundle 'tpope/vim-unimpaired'
+NeoBundle 'tpope/vim-unimpaired'
 " easyly edit surrounding brackets and tags
-Bundle 'tpope/vim-surround'
-" run in the install directory:
-" ./install.sh --omnisharp-completer --clang-completer
-" c# development
-Bundle 'nosami/Omnisharp'
+NeoBundle 'tpope/vim-surround'
 " solarized colors
-Bundle 'altercation/vim-colors-solarized'
+NeoBundle 'altercation/vim-colors-solarized'
 " syntax checker
-Bundle 'scrooloose/syntastic'
+NeoBundle 'scrooloose/syntastic'
 " file explorer
-Bundle 'scrooloose/nerdtree'
+NeoBundle 'scrooloose/nerdtree'
 " easy commenting
-Bundle 'scrooloose/nerdcommenter'
+NeoBundle 'scrooloose/nerdcommenter'
 " better terminal colors
-Bundle 'godlygeek/csapprox'
+NeoBundle 'godlygeek/csapprox'
 " easy alignment
-Bundle 'godlygeek/tabular'
+NeoBundle 'godlygeek/tabular'
 " tagbar
-Bundle 'majutsushi/tagbar'
+NeoBundle 'majutsushi/tagbar'
 " list buffers
-Bundle 'vim-scripts/bufexplorer.zip'
+NeoBundle 'vim-scripts/bufexplorer.zip'
+
 " fuzzy finding everything
-Bundle 'Shougo/vimproc.vim'
-Bundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/vimproc.vim'
+NeoBundle 'Shougo/unite.vim'
 
 " database support
-Bundle 'vim-scripts/dbext.vim'
+NeoBundle 'vim-scripts/dbext.vim'
 
 " Perl support
-Bundle 'vim-perl/vim-perl'
-Bundle 'vim-scripts/perl-support.vim'
-Bundle 'yko/mojo.vim'
+NeoBundle 'vim-perl/vim-perl'
+NeoBundle 'vim-scripts/perl-support.vim'
+NeoBundle 'yko/mojo.vim'
 
 " golang support
-Bundle 'fatih/vim-go'
+NeoBundle 'fatih/vim-go'
 
 " Ruby/Rails support
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-abolish'
-Bundle 'tpope/vim-bundler'
-Bundle 'tpope/vim-rails'
-
-" snippets
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle "garbas/vim-snipmate"
-Bundle "honza/vim-snippets"
+NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'tpope/vim-abolish'
+NeoBundle 'tpope/vim-bundler'
+NeoBundle 'tpope/vim-rails'
 
 " beautifications
-Bundle 'mhinz/vim-signify'
+NeoBundle 'mhinz/vim-signify'
 " show buffers in modeline
-Bundle 'bling/vim-bufferline'
-" fancy status bar
-Bundle 'bling/vim-airline'
+NeoBundle 'bling/vim-bufferline'
 " complete everything
-Bundle 'Valloric/YouCompleteMe'
+NeoBundle 'Valloric/YouCompleteMe'
