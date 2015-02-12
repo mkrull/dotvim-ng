@@ -156,6 +156,22 @@ map <C-J> <C-w>j
 map <C-K> <C-w>k
 map <C-L> <C-w>l
 
+" go qa
+let g:go_fmt_command = "goimports"
+
+" go fancy
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+
+" sniptastic
+let g:UltiSnipsExpandTrigger="<c-x>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
 " gotags
 let g:tagbar_type_go = {
     \ 'ctagstype' : 'go',
@@ -193,7 +209,6 @@ let g:ycm_server_log_level = 'debug'
 call unite#filters#matcher_default#use(['matcher_regex'])
 " ctrl-p
 nnoremap <C-p> :Unite -start-insert file_rec/async<cr>
-nnoremap <C-p>f :Unite -start-insert file_rec/async<cr>
 " yank history
 let g:unite_source_history_yank_enable = 1
 nnoremap <space>y :Unite history/yank<cr>

@@ -1,8 +1,8 @@
 " vim shell. mainly for windows where there are no realy good shells
 NeoBundle 'Shougo/vimshell'
 " snippets
-NeoBundle 'Shougo/neosnippet.vim'
-NeoBundle 'Shougo/neosnippet-snippets'
+NeoBundle 'SirVer/ultisnips'
+NeoBundle 'honza/vim-snippets'
 " autoclose quotes
 NeoBundle 'Raimondi/delimitMate'
 " pairs of brackets
