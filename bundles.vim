@@ -40,12 +40,16 @@ NeoBundle 'yko/mojo.vim'
 
 " golang support
 NeoBundle 'fatih/vim-go'
+NeoBundle 'cespare/vim-go-templates'
 
 " Ruby/Rails support
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'tpope/vim-abolish'
 NeoBundle 'tpope/vim-bundler'
 NeoBundle 'tpope/vim-rails'
+
+" Postgresql support
+NeoBundle 'exu/pgsql.vim'
 
 " beautifications
 NeoBundle 'mhinz/vim-signify'

@@ -223,3 +223,6 @@ function! s:unite_movement()
     imap <buffer> <C-p> <Plug>(unite_select_previous_line)
 endfunction
 
+" use pgsql by default
+let g:sql_type_default = 'pgsql'
+
