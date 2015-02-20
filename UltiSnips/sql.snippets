@@ -1,0 +1,9 @@
+snippet tab "Create table" b
+create table ${1:if not exists} ${2:table_name} (
+${3:col}
+);
+endsnippet
+
+snippet col "Add column to table" b
+    ${1:name} ${2:type} ${3:additional options}$4
+endsnippet

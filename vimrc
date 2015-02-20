@@ -68,7 +68,7 @@ set ts=4
 set shiftwidth=4
 
 if has('gui')
-  set go=re
+  set go=e
 
   if has('gui_macvim')
     set noantialias
