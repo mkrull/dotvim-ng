@@ -42,6 +42,11 @@ NeoBundle 'yko/mojo.vim'
 NeoBundle 'fatih/vim-go'
 NeoBundle 'cespare/vim-go-templates'
 
+" javascript support
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'jelera/vim-javascript-syntax'
+NeoBundle 'marijnh/tern_for_vim'
+
 " Ruby/Rails support
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'tpope/vim-abolish'
