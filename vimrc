@@ -37,19 +37,20 @@ NeoBundleCheck
 source ~/.vim/functions.vim
 
 " hidden chars
-set list
-set listchars=tab:\|-,trail:.,eol:¬
+"set list
+"set listchars=tab:\|-,trail:.,eol:¬
 
 set background=dark
 
 set number
+set relativenumber
 set autoindent
 set hlsearch
 set ruler
 set showcmd
 set incsearch
 set history=50
-"set scrolloff=10
+set scrolloff=15
 set wildmenu
 set ruler
 set smartindent         " smart auto indenting
@@ -98,9 +99,12 @@ else
   let g:solarized_termcolors = 256
   let g:solarized_visibility = "low"
   let g:solarized_contrast   = "high"
+
+  call SetupNERDTree()
 endif
 
-colorscheme solarized
+"colorscheme solarized
+colorscheme kalisi
 " fix gutter colours
 highlight SignColumn ctermbg=235 guibg='#073642'
 
@@ -173,34 +177,8 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 
-" gotags
-let g:tagbar_type_go = {
-    \ 'ctagstype' : 'go',
-    \ 'kinds'     : [
-        \ 'p:package',
-        \ 'i:imports:1',
-        \ 'c:constants',
-        \ 'v:variables',
-        \ 't:types',
-        \ 'n:interfaces',
-        \ 'w:fields',
-        \ 'e:embedded',
-        \ 'm:methods',
-        \ 'r:constructor',
-        \ 'f:functions'
-    \ ],
-    \ 'sro' : '.',
-    \ 'kind2scope' : {
-        \ 't' : 'ctype',
-        \ 'n' : 'ntype'
-    \ },
-    \ 'scope2kind' : {
-        \ 'ctype' : 't',
-        \ 'ntype' : 'n'
-    \ },
-    \ 'ctagsbin'  : 'gotags',
-    \ 'ctagsargs' : '-sort -silent'
-\ }
+" tagbar for code navigation
+let g:tagbar_autoclose = 1
 
 let g:ycm_server_keep_logfiles = 1
 let g:ycm_server_log_level = 'debug'

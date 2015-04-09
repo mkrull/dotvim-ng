@@ -9,8 +9,10 @@ NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'tpope/vim-unimpaired'
 " easyly edit surrounding brackets and tags
 NeoBundle 'tpope/vim-surround'
-" solarized colors
+" colors
 NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'freeo/vim-kalisi'
+
 " syntax checker
 NeoBundle 'scrooloose/syntastic'
 " file explorer
