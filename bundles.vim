@@ -47,7 +47,7 @@ NeoBundle 'cespare/vim-go-templates'
 " javascript support
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'jelera/vim-javascript-syntax'
-NeoBundle 'marijnh/tern_for_vim'
+"NeoBundle 'marijnh/tern_for_vim'
 
 " Ruby/Rails support
 NeoBundle 'vim-ruby/vim-ruby'
@@ -55,12 +55,15 @@ NeoBundle 'tpope/vim-abolish'
 NeoBundle 'tpope/vim-bundler'
 NeoBundle 'tpope/vim-rails'
 
+" HTML editing
+NeoBundle 'mattn/emmet-vim'
+
 " Postgresql support
 NeoBundle 'exu/pgsql.vim'
 
 " beautifications
 NeoBundle 'mhinz/vim-signify'
 " show buffers in modeline
-NeoBundle 'bling/vim-bufferline'
+"NeoBundle 'bling/vim-bufferline'
 " complete everything
 NeoBundle 'Valloric/YouCompleteMe'

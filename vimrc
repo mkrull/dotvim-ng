@@ -76,7 +76,7 @@ if has('gui')
     set transparency=5 " will only work with experimental renderer
     set guifont=Monaco:h14
   else
-    set guifont=Terminus\ 12
+    set guifont=Terminus\ 13
   endif
 endif
 
@@ -106,7 +106,7 @@ endif
 "colorscheme solarized
 colorscheme kalisi
 " fix gutter colours
-highlight SignColumn ctermbg=235 guibg='#073642'
+"highlight SignColumn ctermbg=235 guibg='#073642'
 
 " syntastic
 let g:syntastic_stl_format = '[%E{Error: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
@@ -205,3 +205,5 @@ endfunction
 " use pgsql by default
 let g:sql_type_default = 'pgsql'
 
+" mapleader
+let mapleader = ","
