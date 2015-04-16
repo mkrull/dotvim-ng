@@ -130,8 +130,7 @@ let g:signify_sign_delete_first_line = '|'
 " better airline
 set laststatus=2
 let g:airline_powerline_fonts = 1
-let g:airline_left_sep=' '
-let g:airline_right_sep=' '
+let g:airline_theme='kalisi'
 
 " mojolicious highlighting
 let mojo_highlight_data = 1
@@ -168,6 +167,21 @@ let g:go_fmt_command = "goimports"
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
+
+" go map commands
+" definition
+au FileType go nmap <Leader>ds <Plug>(go-def-split)
+au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+" doc
+au FileType go nmap <Leader>gd <Plug>(go-doc)
+au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
+" type info
+au FileType go nmap <Leader>gi <Plug>(go-info)
+" rename
+au FileType go nmap <Leader>gr <Plug>(go-rename)
+" test
+au FileType go nmap <Leader>gt <Plug>(go-test)
 
 " sniptastic
 let g:UltiSnipsExpandTrigger="<c-x>"

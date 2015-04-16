@@ -1,3 +1,7 @@
+" airline
+NeoBundle 'bling/vim-airline'
+" git
+NeoBundle 'tpope/vim-fugitive'
 " vim shell. mainly for windows where there are no realy good shells
 NeoBundle 'Shougo/vimshell'
 " snippets
