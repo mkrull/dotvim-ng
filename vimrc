@@ -37,8 +37,9 @@ NeoBundleCheck
 source ~/.vim/functions.vim
 
 " hidden chars
-"set list
-"set listchars=tab:\|-,trail:.,eol:¬
+set list
+"set listchars=tab:→\ ,trail:·,eol:↓
+set listchars=tab:\·\ ,trail:·
 
 set background=dark
 
@@ -146,13 +147,17 @@ imap <left> <nop>
 imap <right> <nop>
 
 " This unsets the "last search pattern" register by hitting return
-nnoremap <CR> :noh<CR><CR>
+nnoremap <cr> :noh<cr><cr>
 
 " toggle explorers
-nnoremap <C-N> :NERDTreeToggle<CR>
+nnoremap <c-n> :NERDTreeToggle<cr>
 nnoremap <f2> :BufExplorer<cr>
 nnoremap <f3> :TagbarToggle<cr>
 nnoremap <f4> :SignifyToggle<cr>
+nnoremap <f5> :MBEToggle<cr>
+
+" toggle fullscreen (needs wmctrl)
+map <silent> <f11> :call system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")<cr>
 
 " faster window navigation
 map <C-H> <C-w>h
@@ -172,6 +177,7 @@ let g:go_highlight_structs = 1
 " definition
 au FileType go nmap <Leader>ds <Plug>(go-def-split)
 au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+au FileType go nmap <Leader>df <Plug>(go-def)
 " doc
 au FileType go nmap <Leader>gd <Plug>(go-doc)
 au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
@@ -182,6 +188,9 @@ au FileType go nmap <Leader>gi <Plug>(go-info)
 au FileType go nmap <Leader>gr <Plug>(go-rename)
 " test
 au FileType go nmap <Leader>gt <Plug>(go-test)
+
+" run go lint
+autocmd BufWritePost *.go GoLint
 
 " sniptastic
 let g:UltiSnipsExpandTrigger="<c-x>"
@@ -221,3 +230,21 @@ let g:sql_type_default = 'pgsql'
 
 " mapleader
 let mapleader = ","
+
+" use ag for ack
+if executable('ag')
+    let g:ackprg = 'ag --vimgrep'
+endif
+
+" neocomplete
+" enable at startup
+let g:neocomplete#enable_at_startup = 1
+
+" <TAB>: completion.
+function! s:check_back_space()
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" :
+            \ <SID>check_back_space() ? "\<TAB>" :
+            \ neocomplete#start_manual_complete()

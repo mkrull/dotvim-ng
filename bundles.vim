@@ -1,4 +1,4 @@
-" airline
+" Airline
 NeoBundle 'bling/vim-airline'
 " git
 NeoBundle 'tpope/vim-fugitive'
@@ -70,4 +70,8 @@ NeoBundle 'mhinz/vim-signify'
 " show buffers in modeline
 "NeoBundle 'bling/vim-bufferline'
 " complete everything
-NeoBundle 'Valloric/YouCompleteMe'
+"NeoBundle 'Valloric/YouCompleteMe'
+NeoBundle 'Shougo/neocomplete'
+
+" ack
+NeoBundle 'mileszs/ack.vim'
