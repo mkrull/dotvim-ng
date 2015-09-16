@@ -31,7 +31,6 @@ endfunction
 
 function! SetupNERDTree()
   let NERDTreeWinSize=40
-  "exec 'autocmd VimEnter * NERDTree '.fnameescape($HOME.'/'.$NERD_TREE_ROOT)
   exec 'autocmd VimEnter * cd '.fnameescape($NERD_TREE_ROOT)
 endfunction
 

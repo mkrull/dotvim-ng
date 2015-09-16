@@ -128,6 +128,7 @@ let g:signify_sign_delete_first_line = '|'
 
 " better airline
 set laststatus=2
+set noshowmode
 let g:airline_powerline_fonts = 1
 let g:airline_theme='kalisi'
 
@@ -237,6 +238,11 @@ endif
 " neocomplete
 " enable at startup
 let g:neocomplete#enable_at_startup = 1
+
+" ansible settings
+let g:ansible_attribute_highlight = 'ob'
+let g:ansible_name_highlight = 'd'
+let g:ansible_extra_syntaxes = ''
 
 " <TAB>: completion.
 function! s:check_back_space()

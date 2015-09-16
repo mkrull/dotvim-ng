@@ -58,9 +58,6 @@ NeoBundle 'jelera/vim-javascript-syntax'
 
 " Ruby/Rails support
 NeoBundle 'vim-ruby/vim-ruby'
-NeoBundle 'tpope/vim-abolish'
-NeoBundle 'tpope/vim-bundler'
-NeoBundle 'tpope/vim-rails'
 
 " HTML editing
 NeoBundle 'mattn/emmet-vim'
@@ -81,3 +78,6 @@ NeoBundle 'mileszs/ack.vim'
 
 " racket
 NeoBundle 'wlangstroth/vim-racket'
+
+" improve ansible support
+NeoBundle 'pearofducks/ansible-vim'
