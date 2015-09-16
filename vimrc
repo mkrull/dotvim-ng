@@ -104,10 +104,8 @@ else
   call SetupNERDTree()
 endif
 
-"colorscheme solarized
+" kalisi neovim colorscheme
 colorscheme kalisi
-" fix gutter colours
-"highlight SignColumn ctermbg=235 guibg='#073642'
 
 " syntastic
 let g:syntastic_stl_format = '[%E{Error: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
@@ -146,7 +144,7 @@ imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
 
-" This unsets the "last search pattern" register by hitting return
+" nohlsearch with <cr>
 nnoremap <cr> :noh<cr><cr>
 
 " toggle explorers

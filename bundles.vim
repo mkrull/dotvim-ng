@@ -1,3 +1,8 @@
+let g:make = 'gmake'
+if system('uname -o') =~ '^GNU/'
+        let g:make = 'make'
+endif
+NeoBundle 'Shougo/vimproc.vim', {'build': {'unix': g:make}}
 " Airline
 NeoBundle 'bling/vim-airline'
 " git
@@ -14,7 +19,6 @@ NeoBundle 'tpope/vim-unimpaired'
 " easyly edit surrounding brackets and tags
 NeoBundle 'tpope/vim-surround'
 " colors
-NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'freeo/vim-kalisi'
 
 " syntax checker
@@ -33,7 +37,6 @@ NeoBundle 'majutsushi/tagbar'
 NeoBundle 'vim-scripts/bufexplorer.zip'
 
 " fuzzy finding everything
-NeoBundle 'Shougo/vimproc.vim'
 NeoBundle 'Shougo/unite.vim'
 
 " database support
@@ -75,3 +78,6 @@ NeoBundle 'Shougo/neocomplete'
 
 " ack
 NeoBundle 'mileszs/ack.vim'
+
+" racket
+NeoBundle 'wlangstroth/vim-racket'

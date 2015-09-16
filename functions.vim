@@ -32,7 +32,7 @@ endfunction
 function! SetupNERDTree()
   let NERDTreeWinSize=40
   "exec 'autocmd VimEnter * NERDTree '.fnameescape($HOME.'/'.$NERD_TREE_ROOT)
-  exec 'autocmd VimEnter * cd '.fnameescape($HOME.'/'.$NERD_TREE_ROOT)
+  exec 'autocmd VimEnter * cd '.fnameescape($NERD_TREE_ROOT)
 endfunction
 
 command! -nargs=? -range=% Space2Tab call IndentConvert(<line1>,<line2>,0,<q-args>)
