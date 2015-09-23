@@ -19,7 +19,7 @@ NeoBundle 'tpope/vim-unimpaired'
 " easyly edit surrounding brackets and tags
 NeoBundle 'tpope/vim-surround'
 " colors
-NeoBundle 'freeo/vim-kalisi'
+NeoBundle 'mkrull/vim-kalisi'
 
 " syntax checker
 NeoBundle 'scrooloose/syntastic'
