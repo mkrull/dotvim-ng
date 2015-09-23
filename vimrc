@@ -148,6 +148,7 @@ nnoremap <c-n> :NERDTreeToggle<cr>
 nnoremap <f2> :Unite -start-insert buffer<cr>
 nnoremap <f3> :TagbarToggle<cr>
 nnoremap <f4> :SignifyToggle<cr>
+nnoremap <f5> :Unite -start-insert file_rec/async<cr>
 
 " toggle fullscreen (needs wmctrl)
 map <silent> <f11> :call system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")<cr>
