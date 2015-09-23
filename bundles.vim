@@ -33,8 +33,6 @@ NeoBundle 'godlygeek/csapprox'
 NeoBundle 'godlygeek/tabular'
 " tagbar
 NeoBundle 'majutsushi/tagbar'
-" list buffers
-NeoBundle 'vim-scripts/bufexplorer.zip'
 
 " fuzzy finding everything
 NeoBundle 'Shougo/unite.vim'
