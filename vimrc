@@ -85,25 +85,13 @@ if has('gui_running')
   if has('mouse')
     set mouse=a
   endif
-
-  let g:solarized_contrast   = "high"
-  let g:solarized_italic     = 0
-  let g:solarized_bold       = 0
-  let g:solarized_underline  = 0
-
-  let g:solarized_visibility = "low"
-
-  call SetupNERDTree()
 else
   set background=dark
   set t_Co=256
   set term=screen-256color
-  let g:solarized_termcolors = 256
-  let g:solarized_visibility = "low"
-  let g:solarized_contrast   = "high"
-
-  call SetupNERDTree()
 endif
+
+call SetupNERDTree()
 
 " kalisi neovim colorscheme
 try
@@ -160,7 +148,6 @@ nnoremap <c-n> :NERDTreeToggle<cr>
 nnoremap <f2> :BufExplorer<cr>
 nnoremap <f3> :TagbarToggle<cr>
 nnoremap <f4> :SignifyToggle<cr>
-nnoremap <f5> :MBEToggle<cr>
 
 " toggle fullscreen (needs wmctrl)
 map <silent> <f11> :call system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")<cr>
@@ -209,12 +196,7 @@ let g:UltiSnipsEditSplit="vertical"
 " tagbar for code navigation
 let g:tagbar_autoclose = 1
 
-let g:ycm_server_keep_logfiles = 1
-let g:ycm_server_log_level = 'debug'
-
 " unite config
-" fuzzy matcher by default
-call unite#filters#matcher_default#use(['matcher_regex'])
 " ctrl-p
 nnoremap <C-p> :Unite -start-insert file_rec/async<cr>
 " yank history
