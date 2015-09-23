@@ -81,3 +81,6 @@ NeoBundle 'wlangstroth/vim-racket'
 
 " improve ansible support
 NeoBundle 'pearofducks/ansible-vim'
+
+" Fancy startup screen and session handling
+NeoBundle 'mhinz/vim-startify'
