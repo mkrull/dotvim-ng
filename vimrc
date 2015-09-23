@@ -145,7 +145,7 @@ nnoremap <cr> :noh<cr><cr>
 
 " toggle explorers
 nnoremap <c-n> :NERDTreeToggle<cr>
-nnoremap <f2> :Unite buffer<cr>
+nnoremap <f2> :Unite -start-insert buffer<cr>
 nnoremap <f3> :TagbarToggle<cr>
 nnoremap <f4> :SignifyToggle<cr>
 
