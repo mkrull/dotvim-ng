@@ -97,6 +97,7 @@ if has('gui_running')
 else
   set background=dark
   set t_Co=256
+  set term=screen-256color
   let g:solarized_termcolors = 256
   let g:solarized_visibility = "low"
   let g:solarized_contrast   = "high"
