@@ -106,7 +106,12 @@ else
 endif
 
 " kalisi neovim colorscheme
-colorscheme kalisi
+try
+    colorscheme kalisi
+catch /^Vim\%((\a\+)\)\=:E185/
+    " in case the scheme is not available for some reason
+    colorscheme elflord
+endtry
 
 " syntastic
 let g:syntastic_stl_format = '[%E{Error: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
