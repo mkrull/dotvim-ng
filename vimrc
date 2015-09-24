@@ -200,12 +200,13 @@ let g:tagbar_autoclose = 1
 " unite config
 " ctrl-p
 nnoremap <C-p> :Unite -start-insert file_rec/async<cr>
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
 " yank history
 let g:unite_source_history_yank_enable = 1
 nnoremap <space>y :Unite history/yank<cr>
 
 " grep
-nnoremap <space>/ :Unite -auto-preview grep:.<cr>
+nnoremap <space>/ :Unite -auto-preview -vertical grep:.<cr>
 
 " movement in insert mode
 autocmd FileType unite call s:unite_movement()
