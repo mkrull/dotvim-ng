@@ -33,6 +33,7 @@ NeoBundle 'godlygeek/csapprox'
 NeoBundle 'godlygeek/tabular'
 " tagbar
 NeoBundle 'majutsushi/tagbar'
+NeoBundle 'Shougo/unite-outline'
 
 " fuzzy finding everything
 NeoBundle 'Shougo/unite.vim'

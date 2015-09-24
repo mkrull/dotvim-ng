@@ -121,7 +121,6 @@ let g:signify_sign_delete_first_line = '|'
 " better airline
 set laststatus=2
 set noshowmode
-set timeoutlen=50
 let g:airline_left_sep=' '
 let g:airline_right_sep=' '
 let g:airline_theme='kalisi'
@@ -142,12 +141,47 @@ imap <right> <nop>
 " nohlsearch with <cr>
 nnoremap <cr> :noh<cr><cr>
 
-" toggle explorers
+" unite config
+" defaults
+call unite#custom#profile('ido', 'context', {
+\   'start_insert' : 1,
+\   'prompt' : '>> ',
+\   'prompt_direction' : 'below',
+\   'prompt_visible' : 1,
+\   'direction' : 'dynamicbottom'
+\ })
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
+highlight uniteInputPrompt guifg=#adffdd gui=none ctermfg=70
+
+" ctrl-p
+nnoremap <C-p> :Unite -profile-name=ido file_rec/async<cr>
+
+" yank history
+let g:unite_source_history_yank_enable = 1
+nnoremap <space>y :Unite -profile-name=ido history/yank<cr>
+
+" grep
+nnoremap <space>g :Unite -auto-preview -vertical grep:.<cr>
+
+" outline
+nnoremap <space>o :Unite -profile-name=ido outline<cr>
+nnoremap <space>t :TagbarToggle<cr>
+
+" git changes
+nnoremap <space>s :SignifyToggle<cr>
+
+" explore buffers
+nnoremap <space>b :Unite -profile-name=ido buffer<cr>
+
+" movement in insert mode
+autocmd FileType unite call s:unite_movement()
+function! s:unite_movement()
+    imap <buffer> <C-n> <Plug>(unite_select_next_line)
+    imap <buffer> <C-p> <Plug>(unite_select_previous_line)
+endfunction
+
+" toggle explorer
 nnoremap <c-n> :VimFilerExplorer<cr>
-nnoremap <f2> :Unite -start-insert buffer<cr>
-nnoremap <f3> :TagbarToggle<cr>
-nnoremap <f4> :SignifyToggle<cr>
-nnoremap <f5> :Unite -start-insert file_rec/async<cr>
 
 " toggle fullscreen (needs wmctrl)
 map <silent> <f11> :call system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")<cr>
@@ -195,24 +229,6 @@ let g:UltiSnipsEditSplit="vertical"
 
 " tagbar for code navigation
 let g:tagbar_autoclose = 1
-
-" unite config
-" ctrl-p
-nnoremap <C-p> :Unite -start-insert file_rec/async<cr>
-call unite#filters#matcher_default#use(['matcher_fuzzy'])
-" yank history
-let g:unite_source_history_yank_enable = 1
-nnoremap <space>y :Unite history/yank<cr>
-
-" grep
-nnoremap <space>/ :Unite -auto-preview -vertical grep:.<cr>
-
-" movement in insert mode
-autocmd FileType unite call s:unite_movement()
-function! s:unite_movement()
-    imap <buffer> <C-n> <Plug>(unite_select_next_line)
-    imap <buffer> <C-p> <Plug>(unite_select_previous_line)
-endfunction
 
 " use pgsql by default
 let g:sql_type_default = 'pgsql'
