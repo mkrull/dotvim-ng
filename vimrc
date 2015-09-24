@@ -142,7 +142,6 @@ imap <right> <nop>
 nnoremap <cr> :noh<cr><cr>
 
 " unite config
-" defaults
 call unite#custom#profile('ido', 'context', {
 \   'start_insert' : 1,
 \   'prompt' : '>> ',

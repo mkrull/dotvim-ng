@@ -38,9 +38,6 @@ NeoBundle 'Shougo/unite-outline'
 " fuzzy finding everything
 NeoBundle 'Shougo/unite.vim'
 
-" database support
-NeoBundle 'vim-scripts/dbext.vim'
-
 " Perl support
 NeoBundle 'vim-perl/vim-perl'
 NeoBundle 'vim-scripts/perl-support.vim'
