@@ -91,8 +91,6 @@ else
   set term=screen-256color
 endif
 
-call SetupNERDTree()
-
 " kalisi neovim colorscheme
 try
     colorscheme kalisi
@@ -144,7 +142,7 @@ imap <right> <nop>
 nnoremap <cr> :noh<cr><cr>
 
 " toggle explorers
-nnoremap <c-n> :NERDTreeToggle<cr>
+nnoremap <c-n> :VimFilerExplorer<cr>
 nnoremap <f2> :Unite -start-insert buffer<cr>
 nnoremap <f3> :TagbarToggle<cr>
 nnoremap <f4> :SignifyToggle<cr>

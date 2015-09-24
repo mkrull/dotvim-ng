@@ -24,7 +24,7 @@ NeoBundle 'mkrull/vim-kalisi'
 " syntax checker
 NeoBundle 'scrooloose/syntastic'
 " file explorer
-NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'Shougo/vimfiler'
 " easy commenting
 NeoBundle 'scrooloose/nerdcommenter'
 " better terminal colors

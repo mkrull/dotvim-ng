@@ -29,13 +29,6 @@ function! Help()
   exe 'vert bo help ' . helpdoc
 endfunction
 
-function! SetupNERDTree()
-  let NERDTreeWinSize=40
-  if !empty($NERD_TREE_ROOT)
-      autocmd VimEnter * cd $NERD_TREE_ROOT
-  endif
-endfunction
-
 command! -nargs=? -range=% Space2Tab call IndentConvert(<line1>,<line2>,0,<q-args>)
 command! -nargs=? -range=% Tab2Space call IndentConvert(<line1>,<line2>,1,<q-args>)
 command! -nargs=? -range=% RetabIndent call IndentConvert(<line1>,<line2>,&et,<q-args>)
