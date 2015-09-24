@@ -121,6 +121,7 @@ let g:signify_sign_delete_first_line = '|'
 " better airline
 set laststatus=2
 set noshowmode
+set timeoutlen=50
 let g:airline_left_sep=' '
 let g:airline_right_sep=' '
 let g:airline_theme='kalisi'
