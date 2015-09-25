@@ -236,9 +236,9 @@ if executable('ag')
     let g:ackprg = 'ag --vimgrep'
 endif
 
-" neocomplete
+"deoplete
 " enable at startup
-let g:neocomplete#enable_at_startup = 1
+let g:deoplete#enable_at_startup = 1
 
 " ansible settings
 let g:ansible_attribute_highlight = 'ob'
@@ -252,4 +252,4 @@ function! s:check_back_space()
 endfunction
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" :
             \ <SID>check_back_space() ? "\<TAB>" :
-            \ neocomplete#start_manual_complete()
+            \ deoplete#start_manual_complete()
