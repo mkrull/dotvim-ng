@@ -1,7 +1,5 @@
-set nocompatible
 set nobackup
 set noerrorbells
-set noflash
 set nowrap
 syntax on
 
@@ -88,7 +86,6 @@ if has('gui_running')
 else
   set background=dark
   set t_Co=256
-  set term=screen-256color
 endif
 
 " kalisi neovim colorscheme
