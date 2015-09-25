@@ -8,18 +8,18 @@ filetype off
 " install plugins
 if has('vim_starting')
   " Required:
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
+  set runtimepath+=~/.nvim/bundle/neobundle.vim/
 endif
 
 " Required:
-call neobundle#begin(expand('~/.vim/bundle'))
+call neobundle#begin(expand('~/.nvim/bundle'))
 
 " Let NeoBundle manage NeoBundle
 " Required:
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-" Manage bundles in ~/.vim/bundles.vim
-source ~/.vim/bundles.vim
+" Manage bundles in ~/.nvim/bundles.vim
+source ~/.nvim/bundles.vim
 
 " Required:
 call neobundle#end()
@@ -32,7 +32,7 @@ filetype plugin indent on
 NeoBundleCheck
 
 " load custom functions
-source ~/.vim/functions.vim
+source ~/.nvim/functions.vim
 
 " hidden chars
 set list
@@ -85,7 +85,6 @@ if has('gui_running')
   endif
 else
   set background=dark
-  set t_Co=256
 endif
 
 " kalisi neovim colorscheme
