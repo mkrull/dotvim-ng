@@ -63,7 +63,11 @@ NeoBundle 'exu/pgsql.vim'
 " beautifications
 NeoBundle 'mhinz/vim-signify'
 " complete everything
-NeoBundle 'Shougo/deoplete.nvim'
+if has('nvim')
+    NeoBundle 'Shougo/deoplete.nvim'
+else
+    NeoBundle 'Shougo/neocomplete'
+endif
 
 " ack
 NeoBundle 'mileszs/ack.vim'
