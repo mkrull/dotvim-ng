@@ -1,4 +1,5 @@
 bundle/*
+spell/*
 !bundle/neobundle.vim
 session/
 .nvimrc-rplugin~
