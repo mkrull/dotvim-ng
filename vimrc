@@ -48,10 +48,8 @@ set background=dark
 set number
 set relativenumber
 set autoindent
-set hlsearch
 set ruler
 set showcmd
-set incsearch
 set history=50
 "set scrolloff=15
 set wildmenu
@@ -190,10 +188,12 @@ nnoremap <c-n> :VimFilerExplorer<cr>
 map <silent> <f11> :call system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")<cr>
 
 " faster window navigation
-tnoremap <A-h> <C-\><C-n><C-w>h
-tnoremap <A-j> <C-\><C-n><C-w>j
-tnoremap <A-k> <C-\><C-n><C-w>k
-tnoremap <A-l> <C-\><C-n><C-w>l
+if has('nvim')
+    tnoremap <A-h> <C-\><C-n><C-w>h
+    tnoremap <A-j> <C-\><C-n><C-w>j
+    tnoremap <A-k> <C-\><C-n><C-w>k
+    tnoremap <A-l> <C-\><C-n><C-w>l
+endif
 nnoremap <A-h> <C-w>h
 nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
