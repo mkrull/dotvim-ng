@@ -183,6 +183,8 @@ endfunction
 
 " toggle explorer
 nnoremap <c-n> :VimFilerExplorer<cr>
+" use vimfiler instead of netrw
+let g:vimfiler_as_default_explorer = 1
 
 " toggle fullscreen (needs wmctrl)
 map <silent> <f11> :call system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")<cr>
