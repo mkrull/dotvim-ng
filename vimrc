@@ -2,7 +2,21 @@ if ! has('nvim')
     set nocompatible
     set noflash
 endif
-set nobackup
+
+if has('persistent_undo')
+    if ! isdirectory($HOME . '/.vimtemp')
+        call mkdir($HOME . '/.vimtemp/swap', 'p', 0700)
+        call mkdir($HOME . '/.vimtemp/backup', 'p', 0700)
+        call mkdir($HOME . '/.vimtemp/undo', 'p', 0700)
+    endif
+
+    if isdirectory($HOME . '/.vimtemp')
+        set swapfile directory=~/.vimtemp/swap//
+        set backup backupdir=~/.vimtemp/backup//
+        set undofile undodir=~/.vimtemp/undo//
+    endif
+endif
+
 set noerrorbells
 set nowrap
 syntax on
