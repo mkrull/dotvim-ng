@@ -175,6 +175,9 @@ nnoremap <C-p> :Unite -profile-name=ido file_rec/async<cr>
 let g:unite_source_history_yank_enable = 1
 nnoremap <space>y :Unite -profile-name=ido history/yank<cr>
 
+" unite show marks
+nnoremap <space>m :Unite -profile-name=ido mark<cr>
+
 " grep
 nnoremap <space>g :Unite -auto-preview -vertical grep:.<cr>
 

@@ -80,3 +80,7 @@ NeoBundle 'pearofducks/ansible-vim'
 
 " Fancy startup screen and session handling
 NeoBundle 'mhinz/vim-startify'
+
+" Manage marks
+NeoBundle 'kshenoy/vim-signature'
+NeoBundle 'tacroe/unite-mark'
