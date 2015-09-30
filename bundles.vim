@@ -84,3 +84,6 @@ NeoBundle 'mhinz/vim-startify'
 " Manage marks
 NeoBundle 'kshenoy/vim-signature'
 NeoBundle 'tacroe/unite-mark'
+
+" Play radio streams from vim
+NeoBundle 'klen/unite-radio.vim'

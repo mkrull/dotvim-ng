@@ -178,6 +178,9 @@ nnoremap <space>y :Unite -profile-name=ido history/yank<cr>
 " unite show marks
 nnoremap <space>m :Unite -profile-name=ido mark<cr>
 
+" unite radio
+nnoremap <space>r :Unite -profile-name=ido radio<cr>
+
 " grep
 nnoremap <space>g :Unite -auto-preview -vertical grep:.<cr>
 
