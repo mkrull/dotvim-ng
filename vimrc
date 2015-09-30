@@ -53,7 +53,7 @@ set ruler
 set showcmd
 set incsearch
 set history=50
-set scrolloff=15
+"set scrolloff=15
 set wildmenu
 set ruler
 set smartindent         " smart auto indenting
@@ -190,10 +190,14 @@ nnoremap <c-n> :VimFilerExplorer<cr>
 map <silent> <f11> :call system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")<cr>
 
 " faster window navigation
-map <C-H> <C-w>h
-map <C-J> <C-w>j
-map <C-K> <C-w>k
-map <C-L> <C-w>l
+tnoremap <A-h> <C-\><C-n><C-w>h
+tnoremap <A-j> <C-\><C-n><C-w>j
+tnoremap <A-k> <C-\><C-n><C-w>k
+tnoremap <A-l> <C-\><C-n><C-w>l
+nnoremap <A-h> <C-w>h
+nnoremap <A-j> <C-w>j
+nnoremap <A-k> <C-w>k
+nnoremap <A-l> <C-w>l
 
 " go qa
 let g:go_fmt_command = "goimports"
