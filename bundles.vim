@@ -2,7 +2,7 @@ let g:make = 'gmake'
 if system('uname -o') =~ '^GNU/'
         let g:make = 'make'
 endif
-NeoBundle 'Shougo/vimproc.vim', {'build': {'unix': g:make}}
+NeoBundle 'Shougo/vimproc.vim', {'build': {'unix': g:make, 'mac': 'make -f make_mac.mak'}}
 " Airline
 NeoBundle 'bling/vim-airline'
 " git
