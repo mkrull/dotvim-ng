@@ -1,6 +1,7 @@
 if ! has('nvim')
     set nocompatible
     set noflash
+    set backspace=indent,eol,start
 endif
 
 if has('persistent_undo')
