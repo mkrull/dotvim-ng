@@ -166,7 +166,6 @@ call unite#custom#profile('ido', 'context', {
 \   'prompt_visible' : 1,
 \   'direction' : 'dynamicbottom'
 \ })
-call unite#filters#matcher_default#use(['matcher_fuzzy'])
 highlight uniteInputPrompt guifg=#adffdd gui=none ctermfg=70
 
 " ctrl-p
@@ -293,7 +292,7 @@ endfunction
 if has('nvim')
     inoremap <expr><TAB>  pumvisible() ? "\<C-n>" :
                 \ <SID>check_back_space() ? "\<TAB>" :
-                \ deoplete#start_manual_complete()
+                \ deoplete#mappings#manual_complete()
 else
     inoremap <expr><TAB>  pumvisible() ? "\<C-n>" :
                 \ <SID>check_back_space() ? "\<TAB>" :
