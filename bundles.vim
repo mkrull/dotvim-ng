@@ -3,6 +3,8 @@ if system('uname -o') =~ '^GNU/'
         let g:make = 'make'
 endif
 NeoBundle 'Shougo/vimproc.vim', {'build': {'unix': g:make, 'mac': 'make -f make_mac.mak'}}
+" Easy motion
+NeoBundle 'easymotion/vim-easymotion'
 " Airline
 NeoBundle 'bling/vim-airline'
 " git

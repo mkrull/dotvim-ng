@@ -197,6 +197,9 @@ nnoremap <Leader>st :SignifyToggle<cr>
 " explore buffers
 nnoremap <Leader>ub :Unite -profile-name=ido buffer<cr>
 
+" easymotion
+map <Leader>F <Plug>(easymotion-sn)
+
 " movement in insert mode
 autocmd FileType unite call s:unite_movement()
 function! s:unite_movement()
@@ -254,6 +257,7 @@ nmap <Leader>fs :Gstatus<CR>
 nmap <Leader>fb :Gblame<CR>
 nmap <Leader>fc :Gcommit<CR>
 nmap <Leader>fd :Gdiff<CR>
+nmap <Leader>fp :Gpush<CR>
 
 " run go lint
 autocmd BufWritePost *.go GoLint
