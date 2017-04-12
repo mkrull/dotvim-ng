@@ -249,8 +249,11 @@ au FileType go nmap <Leader>gr <Plug>(go-rename)
 au FileType go nmap <Leader>gt <Plug>(go-test)
 
 " fugitive map
+"
 nmap <Leader>fs :Gstatus<CR>
-nmap <Leader>fb :Gblame
+nmap <Leader>fb :Gblame<CR>
+nmap <Leader>fc :Gcommit<CR>
+nmap <Leader>fd :Gdiff<CR>
 
 " run go lint
 autocmd BufWritePost *.go GoLint
