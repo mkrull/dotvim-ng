@@ -4,6 +4,9 @@ if ! has('nvim')
     set backspace=indent,eol,start
 endif
 
+" mapleader
+let mapleader = "\<space>"
+
 if has('persistent_undo')
     if ! isdirectory($HOME . '/.vimtemp')
         call mkdir($HOME . '/.vimtemp/swap', 'p', 0700)
@@ -173,26 +176,26 @@ nnoremap <C-p> :Unite -profile-name=ido file_rec/async<cr>
 
 " yank history
 let g:unite_source_history_yank_enable = 1
-nnoremap <space>y :Unite -profile-name=ido history/yank<cr>
+nnoremap <Leader>uy :Unite -profile-name=ido history/yank<cr>
 
 " unite show marks
-nnoremap <space>m :Unite -profile-name=ido mark<cr>
+nnoremap <Leader>um :Unite -profile-name=ido mark<cr>
 
 " unite radio
-nnoremap <space>r :Unite -profile-name=ido radio<cr>
+nnoremap <Leader>ur :Unite -profile-name=ido radio<cr>
 
 " grep
-nnoremap <space>g :Unite -auto-preview -vertical grep:.<cr>
+nnoremap <Leader>ug :Unite -auto-preview -vertical grep:.<cr>
 
 " outline
-nnoremap <space>o :Unite -profile-name=ido outline<cr>
-nnoremap <space>t :TagbarToggle<cr>
+nnoremap <Leader>uo :Unite -profile-name=ido outline<cr>
+nnoremap <Leader>ut :TagbarToggle<cr>
 
 " git changes
-nnoremap <space>s :SignifyToggle<cr>
+nnoremap <Leader>st :SignifyToggle<cr>
 
 " explore buffers
-nnoremap <space>b :Unite -profile-name=ido buffer<cr>
+nnoremap <Leader>ub :Unite -profile-name=ido buffer<cr>
 
 " movement in insert mode
 autocmd FileType unite call s:unite_movement()
@@ -245,6 +248,10 @@ au FileType go nmap <Leader>gr <Plug>(go-rename)
 " test
 au FileType go nmap <Leader>gt <Plug>(go-test)
 
+" fugitive map
+nmap <Leader>fs :Gstatus<CR>
+nmap <Leader>fb :Gblame
+
 " run go lint
 autocmd BufWritePost *.go GoLint
 
@@ -261,9 +268,6 @@ let g:tagbar_autoclose = 1
 
 " use pgsql by default
 let g:sql_type_default = 'pgsql'
-
-" mapleader
-let mapleader = ","
 
 " use ag for ack
 if executable('ag')
