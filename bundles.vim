@@ -6,7 +6,8 @@ NeoBundle 'Shougo/vimproc.vim', {'build': {'unix': g:make, 'mac': 'make -f make_
 " Easy motion
 NeoBundle 'easymotion/vim-easymotion'
 " Airline
-NeoBundle 'bling/vim-airline'
+NeoBundle 'vim-airline/vim-airline-themes'
+NeoBundle 'vim-airline/vim-airline-themes'
 " git
 NeoBundle 'tpope/vim-fugitive'
 " vim shell. mainly for windows where there are no realy good shells
