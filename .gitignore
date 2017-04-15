@@ -1,5 +1,4 @@
-bundle/*
+dein-bundles/*
 spell/*
-!bundle/neobundle.vim
 session/
 .nvimrc-rplugin~

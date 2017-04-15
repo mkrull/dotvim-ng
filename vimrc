@@ -27,31 +27,19 @@ syntax on
 
 filetype off
 
-" install plugins
-if has('vim_starting')
-    " Required:
-    set runtimepath+=~/.vim/bundle/neobundle.vim/
+" install plugins with dein
+set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
+
+if dein#load_state('~/.vim/dein-bundles')
+    call dein#begin('~/.vim/dein-bundles')
+    call dein#add('~/.vim/dein/repos/github.com/Shougo/dein.vim')
+    source ~/.vim/dein-bundles.vim
+    call dein#end()
+    call dein#save_state()
 endif
 
 " Required:
-call neobundle#begin(expand('~/.vim/bundle'))
-
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-" Manage bundles in ~/.vim/bundles.vim
-source ~/.vim/bundles.vim
-
-" Required:
-call neobundle#end()
-
-" Required:
 filetype plugin indent on
-
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
 
 " load custom functions
 source ~/.vim/functions.vim
